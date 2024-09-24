@@ -39,6 +39,7 @@ nftset=/pscp.tv/4#inet#fw4#vpn_domains
 nftset=/redis.io/4#inet#fw4#vpn_domains
 nftset=/remove.bg/4#inet#fw4#vpn_domains
 nftset=/scdn.co/4#inet#fw4#vpn_domains
+nftset=/sentry.io/4#inet#fw4#vpn_domains
 nftset=/showip.net/4#inet#fw4#vpn_domains
 nftset=/spotify.com/4#inet#fw4#vpn_domains
 nftset=/spotifycdn.com/4#inet#fw4#vpn_domains
