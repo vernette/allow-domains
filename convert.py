@@ -43,9 +43,6 @@ def dnsmasq(src, out):
     with open(f'{out}-dnsmasq-nfset.lst', 'w') as file:
         for name in domains:
             file.write(f'nftset=/{name}/4#inet#fw4#vpn_domains\n')
-    with open(f'{out}-dnsmasq-ipset.lst', 'w') as file:
-        for name in domains:
-            file.write(f'ipset=/{name}/vpn_domains\n')
 
 
 if __name__ == '__main__':
