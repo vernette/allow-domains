@@ -38,7 +38,7 @@ jobs:
       - name: Push lists
         uses: EndBug/add-and-commit@v9
         with:
-          add: "Domains"
+          add: "Russia"
           author_name: GitHub Action
           author_email: githubaction@githubaction.com
           message: "Update lists"
