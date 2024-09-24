@@ -25,11 +25,6 @@ jobs:
       - run: |
           pip install tldextract
           python  convert.py
-      - name: Check Russia/inside-dnsmasq-ipset
-        uses: itdoginfo/dnsmasq-action@0.1
-        with:
-          file: "./Russia/inside-dnsmasq-ipset.lst"
-          version: 2.89
       - name: Check Russia/inside-dnsmasq-nfset
         uses: itdoginfo/dnsmasq-action@0.1
         with:
