@@ -2,13 +2,13 @@ name: Create lists
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     paths:
       - .github/workflows/create-lists.yml
       - src/**
       - convert.py
   schedule:
-    - cron: '29 */8 * * *'
+    - cron: "29 */8 * * *"
 
 permissions:
   contents: write
@@ -17,49 +17,29 @@ jobs:
   generate:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v4.1.4
-    - name: Generate lists
-      uses: actions/setup-python@v5.1.0
-      with:
-        python-version: '3.10' 
-    - run: |
-        pip install tldextract
-        python  convert.py
-    - name: Check Russia/inside-dnsmasq-ipset
-      uses: itdoginfo/dnsmasq-action@0.1
-      with:
-        file: "./Russia/inside-dnsmasq-ipset.lst"
-        version: 2.89
-    - name: Check Russia/inside-dnsmasq-nfset
-      uses: itdoginfo/dnsmasq-action@0.1
-      with:
-        file: "Russia/inside-dnsmasq-nfset.lst"
-        version: 2.89
-    - name: Check Russia/outside-dnsmasq-ipset
-      uses: itdoginfo/dnsmasq-action@0.1
-      with:
-        file: "Russia/outside-dnsmasq-ipset.lst"
-        version: 2.89
-    - name: Check Russia/outside-dnsmasq-nfset
-      uses: itdoginfo/dnsmasq-action@0.1
-      with:
-        file: "Russia/outside-dnsmasq-nfset.lst"
-        version: 2.89
-    - name: Check Ukraine/inside-dnsmasq-ipset
-      uses: itdoginfo/dnsmasq-action@0.1
-      with:
-        file: "Ukraine/inside-dnsmasq-ipset.lst"
-        version: 2.89
-    - name: Check Ukraine/inside-dnsmasq-nfset
-      uses: itdoginfo/dnsmasq-action@0.1
-      with:
-        file: "Ukraine/inside-dnsmasq-nfset.lst"
-        version: 2.89
-    - name: Push lists
-      uses: EndBug/add-and-commit@v9
-      with:
-        add: 'Russia Ukraine'
-        author_name: GitHub Action
-        author_email: githubaction@githubaction.com
-        message: 'Update lists'
-        push: true
+      - uses: actions/checkout@v4.1.4
+      - name: Generate lists
+        uses: actions/setup-python@v5.1.0
+        with:
+          python-version: "3.10"
+      - run: |
+          pip install tldextract
+          python  convert.py
+      - name: Check Russia/inside-dnsmasq-ipset
+        uses: itdoginfo/dnsmasq-action@0.1
+        with:
+          file: "./Russia/inside-dnsmasq-ipset.lst"
+          version: 2.89
+      - name: Check Russia/inside-dnsmasq-nfset
+        uses: itdoginfo/dnsmasq-action@0.1
+        with:
+          file: "Russia/inside-dnsmasq-nfset.lst"
+          version: 2.89
+      - name: Push lists
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "Domains"
+          author_name: GitHub Action
+          author_email: githubaction@githubaction.com
+          message: "Update lists"
+          push: true
