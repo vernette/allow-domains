@@ -1,6 +1,7 @@
 nftset=/4pda.to/4#inet#fw4#vpn_domains
 nftset=/ads-twitter.com/4#inet#fw4#vpn_domains
 nftset=/brawlstarsgame.com/4#inet#fw4#vpn_domains
+nftset=/browserleaks.com/4#inet#fw4#vpn_domains
 nftset=/cdninstagram.com/4#inet#fw4#vpn_domains
 nftset=/chatgpt.com/4#inet#fw4#vpn_domains
 nftset=/clashofclans.com/4#inet#fw4#vpn_domains
@@ -23,6 +24,7 @@ nftset=/intel.com/4#inet#fw4#vpn_domains
 nftset=/intel.de/4#inet#fw4#vpn_domains
 nftset=/internalfb.com/4#inet#fw4#vpn_domains
 nftset=/jetbrains.com/4#inet#fw4#vpn_domains
+nftset=/medium.com/4#inet#fw4#vpn_domains
 nftset=/nflxext.com/4#inet#fw4#vpn_domains
 nftset=/nflximg.net/4#inet#fw4#vpn_domains
 nftset=/nflxvideo.net/4#inet#fw4#vpn_domains
